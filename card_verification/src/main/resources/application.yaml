@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Card_Verification
+server:
+  port: 8010
