@@ -11,8 +11,8 @@ public class CustomException extends RuntimeException {
      * serialversionID
      */
 
-    private String message;
-    private HttpStatus status;
+    private final String message;
+    private final HttpStatus status;
 
     public CustomException(String message, HttpStatus status) {
         this.message = message;
