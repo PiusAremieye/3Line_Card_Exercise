@@ -1,6 +1,7 @@
 # 1. Card Verification
 
-## Url to application
-<a href="https://card-verify.herokuapp.com/">Link</a>
+## Url
+<a href="https://card-verify.herokuapp.com/">Link to application</a>
 
 # 2. Encoding
+'0(n)'
