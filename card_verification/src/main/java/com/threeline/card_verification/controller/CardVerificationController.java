@@ -24,7 +24,7 @@ public class CardVerificationController {
         this.cardVerificationService = cardVerificationService;
     }
 
-    @GetMapping("/welcome")
+    @GetMapping("/")
     public String welcome() {
         return "Welcome";
     }

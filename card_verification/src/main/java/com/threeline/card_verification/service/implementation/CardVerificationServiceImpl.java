@@ -75,7 +75,7 @@ public class CardVerificationServiceImpl implements CardVerificationService {
                     payload.put(list.get(i - 1), countPayload.get(list.get(i - 1)));
                 }
             }
-            return new CountDto(true, start, limit, 1, payload);
+            return new CountDto(true, start, limit, countPayload.size(), payload);
         } catch (Exception e) {
             throw new CustomException(e.getMessage(), HttpStatus.BAD_REQUEST);
         }

@@ -7,6 +7,7 @@ import com.threeline.card_verification.exception.CustomException;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -32,6 +33,14 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
     ApiResponse<?> ar = new ApiResponse<>(HttpStatus.BAD_REQUEST);
     ar.setError("Invalid card number");
     return buildResponseEntity(ar);
+  }
+
+  @Override
+  protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers,
+      HttpStatus status, WebRequest request) {
+    ApiResponse<?> response = new ApiResponse<>(HttpStatus.BAD_REQUEST);
+    response.setMessage("Validation Error");
+    return buildResponseEntity(response);
   }
 
   @Override
