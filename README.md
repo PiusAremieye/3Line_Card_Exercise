@@ -1,3 +1,3 @@
-# Card Verification
+# 1. Card Verification
 
-# Encoding
+# 2. Encoding
